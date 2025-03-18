@@ -112,11 +112,16 @@ function animate(){
             player.velocity.x = 0;
             player.velocity.y = 0;
         }
-    })
+    }) {
+        console.log('we are colliding')
+        player.velocity.x = 0;
+        player.velocity.y = 0;
+    }
+}
     
     player.update();
-    player.velocity.x=0;
-    player.velocity.y=0;
+    //player.velocity.x=0;
+    // player.velocity.y=0;
 
     if(keys.w.pressed && lastKey === 'w'){
         player.velocity.y = -5;
